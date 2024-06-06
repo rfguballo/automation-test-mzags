@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-06T03:30:15.240Z",
+    "end": "2024-06-06T03:30:16.365Z",
+    "duration": 1125,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aef1651b-5230-4cce-a27c-53506d14d63e",
+      "title": "",
+      "fullFile": "cypress\\unit-service\\date-of-birth.cy.jsx",
+      "file": "cypress\\unit-service\\date-of-birth.cy.jsx",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c61ea769-b737-466f-92fc-ddbf64076a79",
+          "title": "Test the date of birth functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check everything is displayed in ui",
+              "fullTitle": "Test the date of birth functionality check everything is displayed in ui",
+              "timedOut": null,
+              "duration": 50,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.isVisible(DOBLocators.headerLabel);\ncy.shouldHaveText(DOBLocators.headerLabel, dobData.headerLabel);\ncy.isVisible(DOBLocators.datePicker);\ncy.isVisible(DOBLocators.calculateAgeBtn);",
+              "err": {},
+              "uuid": "05c401ff-8d14-4f09-bfc1-1d435824bbec",
+              "parentUUID": "c61ea769-b737-466f-92fc-ddbf64076a79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check if user can select date and calculate age will be enabled",
+              "fullTitle": "Test the date of birth functionality check if user can select date and calculate age will be enabled",
+              "timedOut": null,
+              "duration": 302,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.notDisabled(DOBLocators.datePicker);\ncy.isDisabled(DOBLocators.calculateAgeBtn);\ncy.fill(DOBLocators.datePicker, dobData.firstSelectionDate);\ncy.notDisabled(DOBLocators.calculateAgeBtn);",
+              "err": {},
+              "uuid": "93203b00-4020-48d0-816a-f0795cb338db",
+              "parentUUID": "c61ea769-b737-466f-92fc-ddbf64076a79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check if user age will be displayed based on the calculated date of birth",
+              "fullTitle": "Test the date of birth functionality check if user age will be displayed based on the calculated date of birth",
+              "timedOut": null,
+              "duration": 355,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fill(DOBLocators.datePicker, dobData.firstSelectionDate);\ncy.shouldHaveValue(DOBLocators.datePicker, dobData.firstSelectionDate);\ncy.clickBtn(DOBLocators.calculateAgeBtn);\ncy.shouldHaveText(DOBLocators.resultTextValue, dobData.firstCalculateAgeResult);",
+              "err": {},
+              "uuid": "677338d7-18ac-43bc-babf-1e2666bc522c",
+              "parentUUID": "c61ea769-b737-466f-92fc-ddbf64076a79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check if age value will change when user update the date of birth",
+              "fullTitle": "Test the date of birth functionality check if age value will change when user update the date of birth",
+              "timedOut": null,
+              "duration": 350,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fill(DOBLocators.datePicker, dobData.secondSelectionDate);\ncy.shouldHaveValue(DOBLocators.datePicker, dobData.secondSelectionDate);\ncy.clickBtn(DOBLocators.calculateAgeBtn);\ncy.shouldNotHaveText(DOBLocators.resultTextValue, dobData.firstCalculateAgeResult);\ncy.shouldHaveText(DOBLocators.resultTextValue, dobData.secondCalculateAgeResult);",
+              "err": {},
+              "uuid": "0a52b683-892c-46c4-8bcf-b6ff568a2c97",
+              "parentUUID": "c61ea769-b737-466f-92fc-ddbf64076a79",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "05c401ff-8d14-4f09-bfc1-1d435824bbec",
+            "93203b00-4020-48d0-816a-f0795cb338db",
+            "677338d7-18ac-43bc-babf-1e2666bc522c",
+            "0a52b683-892c-46c4-8bcf-b6ff568a2c97"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1057,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

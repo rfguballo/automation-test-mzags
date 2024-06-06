@@ -1,0 +1,1 @@
+Installation Guide in order to Run the Cypress Framework

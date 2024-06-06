@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-06T03:28:26.232Z",
+    "end": "2024-06-06T03:28:45.745Z",
+    "duration": 19513,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dafc5bbc-5dc6-46ef-ba9c-3c50d1739eb0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\specTestGoogleSearch.cy.js",
+      "file": "cypress\\e2e\\specTestGoogleSearch.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de8e9f37-6e10-40f0-b29a-1063f92652b6",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check if google search functionality is working as expected",
+              "fullTitle": "template spec check if google search functionality is working as expected",
+              "timedOut": null,
+              "duration": 19433,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.isVisible(_googleSearchMain.default.searchBox);\ncy.fill(_googleSearchMain.default.searchBox, _searchData.default.data);\ncy.clickBtn(_googleSearchMain.default.googleSearchButton);\ncy.isHidden(_googleSearchMain.default.searchBox);\ncy.isHidden(_googleSearchMain.default.googleSearchButton);\ncy.isVisible(_googleSearchedDetails.default.searchButton);\ncy.hover(_googleSearchedDetails.default.searchButton);\ncy.isVisible(_googleSearchedDetails.default.googleLogo);\ncy.hover(_googleSearchedDetails.default.googleLogo);\ncy.clickBtn(_googleSearchedDetails.default.googleLogo);\ncy.isVisible(_googleSearchMain.default.searchBox);\ncy.isEmpty(_googleSearchMain.default.searchBox);",
+              "err": {},
+              "uuid": "2bae92e7-da2b-4ee6-aa86-f1d5db3d87aa",
+              "parentUUID": "de8e9f37-6e10-40f0-b29a-1063f92652b6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2bae92e7-da2b-4ee6-aa86-f1d5db3d87aa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19433,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
